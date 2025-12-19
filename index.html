@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Golden Plate | Professional Dining</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, .font-serif { font-family: 'Playfair Display', serif; }
+        .glass { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-serif font-bold text-amber-600">The Golden Plate</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 text-sm font-medium uppercase tracking-widest">
+                        <a href="#home" class="text-gray-900 hover:text-amber-600 transition">Home</a>
+                        <a href="#menu" class="text-gray-900 hover:text-amber-600 transition">Menu</a>
+                        <a href="#about" class="text-gray-900 hover:text-amber-600 transition">About</a>
+                        <a href="#booking" class="bg-amber-600 text-white px-6 py-3 rounded-full hover:bg-amber-700 transition shadow-lg">Reserve Now</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button class="text-gray-900 focus:outline-none" onclick="toggleMenu()">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center text-white pt-20">
+        <div class="px-4 max-w-4xl">
+            <h1 class="text-5xl md:text-7xl font-bold mb-6">Experience Culinary Excellence</h1>
+            <p class="text-lg md:text-xl mb-10 font-light tracking-wide">නියම ශ්‍රී ලාංකේය සහ ජාත්‍යන්තර රසයෙන් යුත් විශිෂ්ට භෝජන අත්දැකීමක් සඳහා අදම වෙන්කරවා ගන්න.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#booking" class="bg-amber-600 text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-amber-700 transition transform hover:scale-105 shadow-xl">Book a Table</a>
+                <a href="#menu" class="bg-white text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition shadow-xl">View Menu</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Highlights -->
+    <section id="menu" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Signature Dishes</h2>
+                <div class="w-24 h-1 bg-amber-600 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-10">
+                <!-- Item 1 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&q=80&w=1000" alt="Healthy Plate" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold uppercase tracking-tighter">Grilled Salmon Delight</h3>
+                        <span class="text-amber-600 font-bold">Rs. 3,200</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Fresh Atlantic salmon served with roasted vegetables and lemon zest.</p>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=1000" alt="Steak" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold uppercase tracking-tighter">Premium Ribeye Steak</h3>
+                        <span class="text-amber-600 font-bold">Rs. 4,800</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Dry-aged steak cooked to perfection with herb-infused butter.</p>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group cursor-pointer">
+                    <div class="overflow-hidden rounded-2xl mb-4 shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&q=80&w=1000" alt="Pizza" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="flex justify-between items-center mb-2">
+                        <h3 class="text-xl font-bold uppercase tracking-tighter">Truffle Mushroom Pizza</h3>
+                        <span class="text-amber-600 font-bold">Rs. 2,400</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Hand-tossed dough with wild mushrooms and premium truffle oil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-24 bg-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 bg-amber-600 p-12 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-6">Reserve Your Table</h2>
+                    <p class="text-amber-100 mb-8 font-light">Join us for an unforgettable evening. We recommend booking at least 24 hours in advance.</p>
+                    <div class="space-y-4 text-sm uppercase tracking-widest">
+                        <p><strong>Open:</strong> 11 AM - 11 PM</p>
+                        <p><strong>Phone:</strong> +94 11 234 5678</p>
+                    </div>
+                </div>
+                
+                <div class="md:w-2/3 p-12">
+                    <form id="reservationForm" onsubmit="handleBooking(event)">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-2">Full Name</label>
+                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-amber-600 focus:ring-1 focus:ring-amber-600 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-2">Phone Number</label>
+                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-amber-600 focus:ring-1 focus:ring-amber-600 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-2">Date</label>
+                                <input type="date" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-amber-600 focus:ring-1 focus:ring-amber-600 outline-none transition">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-gray-500 uppercase mb-2">Guests</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-amber-600 focus:ring-1 focus:ring-amber-600 outline-none transition">
+                                    <option>2 Persons</option>
+                                    <option>4 Persons</option>
+                                    <option>6 Persons</option>
+                                    <option>8+ Persons</option>
+                                </select>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full bg-gray-900 text-white py-4 rounded-xl font-bold hover:bg-black transition shadow-lg uppercase tracking-widest">Confirm Booking Request</button>
+                    </form>
+                    <div id="successMessage" class="hidden mt-6 p-4 bg-green-50 text-green-700 rounded-xl text-center font-medium">
+                        ඔබේ වෙන්කරවා ගැනීම සාර්ථකයි! අප ඉක්මනින් ඔබව සම්බන්ධ කරගන්නෙමු.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-serif font-bold text-amber-600 mb-4">The Golden Plate</h2>
+            <p class="text-gray-500 max-w-md mx-auto mb-8">Quality ingredients, exceptional service, and an ambiance you will never forget.</p>
+            <div class="flex justify-center space-x-6 mb-8">
+                <a href="#" class="text-gray-400 hover:text-amber-600">Facebook</a>
+                <a href="#" class="text-gray-400 hover:text-amber-600">Instagram</a>
+                <a href="#" class="text-gray-400 hover:text-amber-600">Twitter</a>
+            </div>
+            <p class="text-xs text-gray-400">© 2025 The Golden Plate Restaurant. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            // Logic for mobile menu could go here
+        }
+
+        function handleBooking(event) {
+            event.preventDefault();
+            document.getElementById('reservationForm').classList.add('opacity-50', 'pointer-events-none');
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // In a real scenario, you'd send data to a server here
+            setTimeout(() => {
+                event.target.reset();
+                document.getElementById('reservationForm').classList.remove('opacity-50', 'pointer-events-none');
+            }, 5000);
+        }
+    </script>
+</body>
+</html>
